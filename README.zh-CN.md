@@ -15,6 +15,11 @@
 
 [English](./README.md) · 中文
 
+## ❤️ 赞助商
+
+| <a href="https://ergouzi.life/register?utm_source=antdv-next"><img src="https://nzj13gqqmj.ufs.sh/f/7vCb7ZuKZQXM8I2IHQXhPqNEAXV4gJm0LzopUFvck3bCKG1e" width="80" alt="二狗子中转"></a> | <a href="https://penna.pro"><img src="https://penna.pro/logo.svg" width="80" alt="Penna Note"></a> |
+| :-: | :-: |
+
 </div>
 
 ## ✨ 特性
