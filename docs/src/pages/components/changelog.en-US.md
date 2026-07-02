@@ -2,6 +2,32 @@
 title: Component Changelog
 ---
 
+## V1.4.1
+
+Release Date: 2026-07-02
+
+This release mainly fixes **vue 3.5.39 compatibility issues** ([vuejs/core#14985](https://github.com/vuejs/core/pull/14985) changed when function refs are invoked): overlay components (Tooltip/Popover/Popconfirm/Dropdown) mis-positioning and dropping the first-open animation, message/notification notices stacking on top of each other, and Masonry layout breakage. It also adds a component meta block to the component doc pages and refines the icon overview.
+
+**🐞 Fixes**
+
+* fix: fix overlay components mis-positioning / losing the first-open animation under the vue 3.5.39 production build (Tooltip / Popover / Popconfirm / Dropdown) — via `@v-c/trigger` 1.0.18 (#623)
+* fix: fix **message / notification notices stacking** on top of each other under vue 3.5.39 (first-frame height measurement failed) — via `@v-c/notification` 2.0.2 (#623)
+* fix(masonry): fix Masonry layout breakage caused by failed item height measurement under vue 3.5.39; resolve via `createElementRef` (#623)
+* fix(deps): add `@v-c/notification` to overrides to drop the stale version left in the lockfile
+
+**📖 Docs**
+
+* docs: add a component meta block (import / feedback / docs / version) to component doc pages, aligning with ant-design
+* docs(icon): categorize the newly added AI / brand icons under the brand group, tag them as "added in 1.4.0", and surface them first
+
+**🧪 Tests**
+
+* test(drawer): add a regression test for Watermark inheritance inside Drawer (vue 3.5.39)
+
+**🧰 Dependencies**
+
+* chore(deps): bump vue to `^3.5.39`; `@v-c/trigger` 1.0.18, `@v-c/notification` 2.0.2, `@v-c/util` 1.0.20 and related toolchain deps
+
 ## V1.4.0
 
 Release Date: 2026-06-30

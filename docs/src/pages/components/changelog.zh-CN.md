@@ -2,6 +2,32 @@
 title: 组件更新日志
 ---
 
+## V1.4.1
+
+发布日期：2026-07-02
+
+本次版本重点修复 **vue 3.5.39 兼容性问题**（[vuejs/core#14985](https://github.com/vuejs/core/pull/14985) 改变了函数 ref 的调用时机）：修复浮层组件（Tooltip/Popover/Popconfirm/Dropdown）首次打开定位异常与首帧动画丢失、message/notification 通知叠加、Masonry 布局错乱等问题；同时为组件文档页新增「组件元信息」块，并完善图标总览。
+
+**🐞 问题修复 Fixes**
+
+* fix：修复 vue 3.5.39 生产构建下**浮层组件首次打开定位异常/首帧动画丢失**（Tooltip / Popover / Popconfirm / Dropdown）—— 底层升级 `@v-c/trigger` 1.0.18（#623）
+* fix：修复 vue 3.5.39 下 **message / notification 通知相互叠加**（首帧高度测量失败）—— 底层升级 `@v-c/notification` 2.0.2（#623）
+* fix(masonry)：修复 vue 3.5.39 下 Masonry item 高度测量失败导致的布局错乱，改用 `createElementRef`（#623）
+* fix(deps)：将 `@v-c/notification` 加入 overrides，消除 lock 中残留的旧版本
+
+**📖 文档 Docs**
+
+* docs：组件文档页新增「组件元信息」块（使用 / 反馈 / 文档 / 版本），对齐 ant-design
+* docs(icon)：将新增的 AI / 品牌图标归入品牌分类、标记「1.4.0 新增」并置顶展示
+
+**🧪 测试 Tests**
+
+* test(drawer)：新增 Drawer 内 Watermark 继承的回归测试（vue 3.5.39）
+
+**🧰 依赖更新 Dependencies**
+
+* chore(deps)：升级 vue 至 `^3.5.39`；`@v-c/trigger` 1.0.18、`@v-c/notification` 2.0.2、`@v-c/util` 1.0.20 及相关工具链依赖
+
 ## V1.4.0
 
 发布日期：2026-06-30
