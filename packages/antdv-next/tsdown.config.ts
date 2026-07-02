@@ -42,6 +42,7 @@ export default defineConfig({
       '@antdv-next/cssinjs',
       'csstype',
       '@v-c/util',
+      '@vueuse/core',
     ],
   },
 })
